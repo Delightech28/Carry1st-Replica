@@ -1,0 +1,8 @@
+{
+  "name": "Carry1st",
+  "description": "A modern digital goods & top-up platform for gaming pins, mobile data and airtime, gift cards, and utility top-ups in Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
