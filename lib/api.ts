@@ -4,8 +4,13 @@ import { Product, Order, UserProfile, PRODUCTS, INITIAL_ORDERS } from './data';
 const initMockDB = () => {
   if (typeof window === 'undefined') return;
 
-  if (!localStorage.getItem('carry1st_products')) {
+  // Sync products catalog if updated or not existing
+  const CURRENT_DB_VERSION = 'v4';
+  const storedVersion = localStorage.getItem('carry1st_db_version');
+
+  if (storedVersion !== CURRENT_DB_VERSION || !localStorage.getItem('carry1st_products')) {
     localStorage.setItem('carry1st_products', JSON.stringify(PRODUCTS));
+    localStorage.setItem('carry1st_db_version', CURRENT_DB_VERSION);
   }
 
   if (!localStorage.getItem('carry1st_orders')) {

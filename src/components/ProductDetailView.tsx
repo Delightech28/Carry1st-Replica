@@ -230,7 +230,7 @@ export const ProductDetailView: React.FC = () => {
                 {/* 1. Pick variant item list */}
                 <div className="space-y-2.5">
                   <label className="text-xs font-semibold text-gray-300 block">Select Denomination Packed Option</label>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <div className="grid grid-cols-3 gap-2">
                     {product.variants.map((v) => {
                       const isSelected = selectedVariant?.id === v.id;
                       return (
@@ -241,14 +241,14 @@ export const ProductDetailView: React.FC = () => {
                             setValidationError('');
                             setSelectedVariant(v);
                           }}
-                          className={`p-3 rounded-xl border text-left flex flex-col justify-between h-20 transition-all ${
+                          className={`p-2 sm:p-3 rounded-xl border text-left flex flex-col justify-between h-20 transition-all ${
                             isSelected 
                               ? 'bg-indigo-600/10 border-indigo-500 text-white shadow-md shadow-indigo-600/5' 
                               : 'bg-[#0a0a0f] border-white/5 hover:border-white/10 text-gray-400 hover:text-white'
                           }`}
                         >
-                          <span className={`text-xs font-bold ${isSelected ? 'text-indigo-400' : 'text-gray-300'}`}>{v.name}</span>
-                          <span className="text-sm font-extrabold font-mono text-white">₦{v.priceNaira.toLocaleString()}</span>
+                          <span className={`text-[10px] sm:text-xs font-bold leading-tight ${isSelected ? 'text-indigo-400' : 'text-gray-300'}`}>{v.name}</span>
+                          <span className="text-xs sm:text-sm font-extrabold font-mono text-white">₦{v.priceNaira.toLocaleString()}</span>
                         </button>
                       );
                     })}

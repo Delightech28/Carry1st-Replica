@@ -165,11 +165,13 @@ export const PRODUCTS: Product[] = [
     deliveryLabel: 'MTN Mobile Number',
     deliveryPlaceholder: 'e.g. 08031234567',
     variants: [
-      { id: 'mtn-500mb', name: '500MB (30 Days)', value: '500MB', priceNaira: 350 },
-      { id: 'mtn-1gb', name: '1GB (30 Days)', value: '1GB', priceNaira: 600 },
-      { id: 'mtn-2gb', name: '2GB (30 Days)', value: '2GB', priceNaira: 1100 },
-      { id: 'mtn-5gb', name: '5GB (30 Days)', value: '5GB', priceNaira: 2500 },
-      { id: 'mtn-10gb', name: '10GB (30 Days)', value: '10GB', priceNaira: 4500 }
+      { id: 'mtn-110mb', name: '110MB (30 Days)', value: '110MB', priceNaira: 100 },
+      { id: 'mtn-1gb', name: '1GB (30 Days)', value: '1GB', priceNaira: 500 },
+      { id: 'mtn-2_5gb', name: '2.5GB (30 Days)', value: '2.5GB', priceNaira: 850 },
+      { id: 'mtn-3_5gb', name: '3.5GB (30 Days)', value: '3.5GB', priceNaira: 1200 },
+      { id: 'mtn-4gb', name: '4GB (30 Days)', value: '4GB', priceNaira: 1400 },
+      { id: 'mtn-5_5gb', name: '5.5GB (30 Days)', value: '5.5GB', priceNaira: 1700 },
+      { id: 'mtn-34gb', name: '34GB (30 Days)', value: '34GB', priceNaira: 12000 }
     ]
   },
   {
@@ -274,9 +276,9 @@ export const INITIAL_ORDERS: Order[] = [
     productId: 'mtn-data',
     productName: 'MTN High-Speed SME Data',
     productImage: 'Rss',
-    variantId: 'mtn-2gb',
-    variantValue: '2GB',
-    priceNaira: 1100,
+    variantId: 'mtn-4gb',
+    variantValue: '4GB',
+    priceNaira: 1400,
     deliveryInfo: '08031234567',
     email: '0xchronosfi@gmail.com',
     status: 'completed',
